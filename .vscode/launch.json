@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BubbleSort",
+            "request": "launch",
+            "mainClass": "BubbleSort",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SelectSort",
+            "request": "launch",
+            "mainClass": "SelectSort",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
