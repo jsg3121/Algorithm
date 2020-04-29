@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Sukcha",
+            "request": "launch",
+            "mainClass": "Sukcha",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InsertSort",
+            "request": "launch",
+            "mainClass": "InsertSort",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BubbleSort",
             "request": "launch",
             "mainClass": "BubbleSort",
