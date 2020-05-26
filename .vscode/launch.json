@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - baekjoon_1330_numCompare",
+            "request": "launch",
+            "mainClass": "baekjoon_1330_numCompare",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - baekjoon_2588_multiple",
             "request": "launch",
             "mainClass": "baekjoon_2588_multiple",
