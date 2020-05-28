@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - beakjoon_2884_alam",
+            "request": "launch",
+            "mainClass": "beakjoon_2884_alam",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - baekjoon_2753_leapYear",
             "request": "launch",
             "mainClass": "baekjoon_2753_leapYear",

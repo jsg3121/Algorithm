@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class baekjoon_10171_cat {
     public static void main(String[] args) {

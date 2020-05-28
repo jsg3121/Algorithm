@@ -15,5 +15,6 @@ public class baekjoon_1330_numCompare {
             System.out.println("==");
         }
 
+        sc.close();
     }
 }

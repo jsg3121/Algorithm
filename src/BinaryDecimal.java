@@ -1,6 +1,4 @@
 // 2진수 값을 10진수로 변환하여 출력하기
-import java.util.*;
-
 public class BinaryDecimal {
 
 	public static void main(String[] args) {

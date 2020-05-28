@@ -1,7 +1,5 @@
 //전교 석차 구하기
 
-import java.util.*;
-
 public class Sukcha {
     public static void main(String[] args) {
         int[] rank = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
