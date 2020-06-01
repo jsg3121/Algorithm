@@ -13,6 +13,12 @@ public class baekjoon_11022_add_8 {
             int x = sc.nextInt();
             int y = sc.nextInt();
 
+            arr1[i] = x;
+            arr2[i] = y;
+        }
+
+        for(int i = 0; i < a; i++){
+            System.out.println("Case #" + (i + 1) + ": " + arr1[i] + " + " + arr2[i] + " = " + (arr1[i] + arr2[i]));
         }
     }
     
