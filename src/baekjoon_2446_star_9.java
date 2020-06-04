@@ -8,6 +8,7 @@ public class baekjoon_2446_star_9 {
 
         String star = "*";
         int count = Integer.parseInt(br.readLine());
+        int n = 1;
 
         for(int i = 0; i < 2 * count - 1; i++){
             if(i < count) {
@@ -23,9 +24,10 @@ public class baekjoon_2446_star_9 {
                 for(int j = i + 1; j < 2 * count - 1; j++) {
                     bw.write(" ");
                 }
-                for(int j = 2 * count - 1; j < 2 ; j--) {
+                for(int j = 0; j < 2 * n + 1; j++) {
                     bw.write(star);
                 }
+                n++;
                 bw.write("\n");
             }
         }
