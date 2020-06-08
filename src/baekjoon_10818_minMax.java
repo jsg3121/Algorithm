@@ -3,27 +3,37 @@ import java.util.*;
 public class baekjoon_10818_minMax {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int cnt = sc.nextInt();
-        int[] arr = new int[cnt];
-
-        for(int i = 0; i < cnt; i++) {
+        
+        int num = sc.nextInt();
+        int[] arr = new int[num];
+        for(int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
 
-        int min = arr[0], max = 0;
+        sort(arr, 0, arr.length - 1);
 
-        for(int i = 0; i < arr.length; i++) {
-            if(min > arr[i]){
-                min = arr[i];
-            }
-            if(max < arr[i]) {
-                max = arr[i];
-            }
-        }
-
-        System.out.println(min + " " + max);
-
+        System.out.println(arr[0] + " " + arr[arr.length - 1]);
         sc.close();
+    }
+
+    public static void sort(int[] data, int l, int r) {
+        int left = l;
+        int right = r;
+        int pivot = data[(l+r)/2];
+        
+        do{
+            while(data[left] < pivot) left++;
+            while(data[right] > pivot) right--;
+            if(left <= right){    
+                int temp = data[left];
+                data[left] = data[right];
+                data[right] = temp;
+                left++;
+                right--;
+            }
+        }while (left <= right);
+        
+        if(l < right) sort(data, l, right);
+        if(r > left) sort(data, left, r);
     }
 }
