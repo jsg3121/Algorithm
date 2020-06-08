@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - baekjoon_10818_minMax",
+            "request": "launch",
+            "mainClass": "baekjoon_10818_minMax",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - baekjoon_10996_star_21",
+            "request": "launch",
+            "mainClass": "baekjoon_10996_star_21",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - baekjoon_2446_star_9",
             "request": "launch",
             "mainClass": "baekjoon_2446_star_9",
