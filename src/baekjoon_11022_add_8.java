@@ -20,6 +20,8 @@ public class baekjoon_11022_add_8 {
         for(int i = 0; i < a; i++){
             System.out.println("Case #" + (i + 1) + ": " + arr1[i] + " + " + arr2[i] + " = " + (arr1[i] + arr2[i]));
         }
+
+        sc.close();
     }
     
 }

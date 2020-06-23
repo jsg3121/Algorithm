@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - levelTest",
+            "request": "launch",
+            "mainClass": "levelTest",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - baekjoon_3052_namugee",
             "request": "launch",
             "mainClass": "baekjoon_3052_namugee",

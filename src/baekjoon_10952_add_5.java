@@ -7,8 +7,6 @@ public class baekjoon_10952_add_5 {
 
         Scanner sc = new Scanner(System.in);
 
-        int i = 0;
-
         while(true){
 
             int a = sc.nextInt();

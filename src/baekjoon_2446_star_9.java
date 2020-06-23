@@ -1,4 +1,3 @@
-import java.util.*;
 import java.io.*;
 
 public class baekjoon_2446_star_9 {
