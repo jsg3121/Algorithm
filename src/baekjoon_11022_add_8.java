@@ -22,6 +22,7 @@ public class baekjoon_11022_add_8 {
         }
 
         sc.close();
+
     }
     
 }

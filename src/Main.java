@@ -14,6 +14,9 @@ public class Main {
         //     }
         // }
 
+
+
+
         // String str = "12345";
         // int sum = 0;
         // for(int i = 0; i <str.length(); i++) {
@@ -32,6 +35,9 @@ public class Main {
         // }
         // System.out.println("sum = " + sum);
 
+
+
+
         // int num1 = 1, num2 = 1, num3 = 0;
 
         // System.out.print(num1 + ", " + num2);
@@ -43,20 +49,38 @@ public class Main {
         //     System.out.print(", " + num3);
         // }
 
-        String value = "1212344";
-        char ch = ' ';
-        boolean isNumber = true;
+        // String value = "1212344";
+        // boolean isNumber = true;
 
-        for(int i = 0; i < value.length(); i++) {
-            if(!('0' < value.charAt(i) && value.charAt(i) < '9')){
-                isNumber = false;
-                break;
-            } 
+        // for(int i = 0; i < value.length(); i++) {
+        //     if(!('0' < value.charAt(i) && value.charAt(i) < '9')){
+        //         isNumber = false;
+        //         break;
+        //     } 
+        // }
+
+        // if(!isNumber) System.out.println("문자열");
+        // else System.out.println("숫자");
+      
+
+        for(int i = 0; i <= 10; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
 
-        if(!isNumber) System.out.println("문자열");
-        else System.out.println("숫자");
-      
+        int i = 0;
+        while(i <= 10) {
+            int j = 0;
+            while(j <= i){
+                j++;
+                System.out.print("*");
+            }
+            i++;
+            System.out.println();
+        }
+
     }   
 
     
