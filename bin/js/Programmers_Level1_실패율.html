@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let N = 4,
+      stages = [1, 2, 3, 5, 5];
+    solution(N, stages);
+
+    function solution(N, stages) {
+      var answer = [];
+      let arr = [];
+      let cnt = 0;
+
+      stages.sort((a, b) => a - b);
+
+      for (let i = 1; i <= N; i++) {
+        for (let j = 0; j < stages.length; j++) {
+          if (i >= stages[j]) {
+            cnt++;
+          }
+        }
+
+        arr.push([cnt / stages.length, i]);
+
+        for (let j = 0; j < cnt; j++) {
+          stages.shift();
+        }
+        cnt = 0;
+      }
+      arr.sort((a, b) => b[0] - a[0]);
+
+      arr.forEach((el) => {
+        answer.push(el[1]);
+      });
+
+      return answer;
+    }
+  </script>
+</html>
