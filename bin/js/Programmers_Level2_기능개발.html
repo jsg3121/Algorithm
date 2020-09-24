@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let progresses = [99, 50, 50, 30, 20, 55, 0],
+      speeds = [30, 1, 1, 30, 1, 5, 100];
+    solution(progresses, speeds);
+
+    function solution(progresses, speeds) {
+      var answer = [];
+
+      let cnt = 1,
+        prevProgress = 0;
+
+      let arr = new Array(progresses.length);
+      arr.fill(0);
+
+      for (let i = 0; i < progresses.length; i++) {
+        while (true) {
+          if (progresses[i] >= 100) {
+            break;
+          }
+          progresses[i] += speeds[i];
+          arr[i] += 1;
+        }
+      }
+      console.log(arr);
+      prevProgress = arr[0];
+
+      for (let i = 0; i < arr.length; i++) {
+        if (prevProgress >= arr[i + 1]) {
+          cnt++;
+        } else {
+          prevProgress = arr[i + 1];
+          answer.push(cnt);
+          cnt = 1;
+        }
+      }
+
+      console.log(answer);
+      return answer;
+    }
+  </script>
+</html>

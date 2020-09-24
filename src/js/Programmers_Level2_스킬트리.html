@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let skill = "CBD",
+      skill_trees = ["QPWORTIOCKEPSB"];
+    solution(skill, skill_trees);
+
+    function solution(skill, skill_trees) {
+      var answer = 0;
+
+      const skillCheck = (skill, skillTree) => {
+        let skillCnt = new Array(skill.length),
+          skillVal = true;
+
+        skillCnt.fill(0);
+
+        for (let i = 0; i < skill.length; i++) {
+          if (skillTree.indexOf(skill.charAt(i)) == -1) {
+            skillCnt[i] = 27;
+          } else {
+            skillCnt[i] = skillTree.indexOf(skill.charAt(i));
+          }
+        }
+
+        for (let i = 0; i < skill.length - 1; i++) {
+          if (skillCnt[0] === -1) {
+            skillVal = false;
+            break;
+          }
+          for (let j = i + 1; j < skill.length; j++) {
+            if (skillCnt[i] > skillCnt[j]) {
+              skillVal = false;
+              break;
+            }
+          }
+        }
+        if (skillVal) answer++;
+      };
+
+      skill_trees.forEach((el) => {
+        skillCheck(skill, el);
+      });
+      return answer;
+    }
+  </script>
+</html>
