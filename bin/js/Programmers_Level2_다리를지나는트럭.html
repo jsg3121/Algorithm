@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let bridge_length = 2,
+      weight = 10,
+      truck_weights = [7, 4, 5, 6];
+    solution(bridge_length, weight, truck_weights);
+
+    function solution(bridge_length, weight, truck_weights) {
+      var answer = 0;
+      let going = [],
+        goingWeight = 0;
+      truck_weights = truck_weights.map((x) => {
+        return {
+          weight: x,
+          go: 0,
+        };
+      });
+
+      going.push(truck_weights.shift());
+      weight -= going[0].weight;
+
+      while (answer < 5) {
+        going.map((x) => x.go++);
+
+        going = going.filter((g) => {
+          return g.go < 3;
+        });
+        console.log(going);
+        answer++;
+      }
+
+      return answer;
+    }
+  </script>
+</html>

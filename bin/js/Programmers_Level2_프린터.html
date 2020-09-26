@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let priorities = [1, 1, 9, 1, 1, 1],
+      locate = 0;
+    solution(priorities, locate);
+
+    function solution(priorities, locate) {
+      var answer = 0;
+      for (let i = 0; i < priorities.length; i++) {
+        priorities[i] = [priorities[i], i];
+      }
+      const important = (priorities, locate) => {
+        let i = 0;
+        let arr = priorities.map((x) => {
+          return x[0];
+        });
+        let max = Math.max(...arr);
+        while (true) {
+          if (priorities[0][0] < max) {
+            priorities.push(priorities[0]);
+            priorities.shift();
+          }
+          i++;
+          if (i == priorities.length) break;
+        }
+      };
+      while (true) {
+        important(priorities, locate);
+        if (priorities[0][1] === locate) {
+          answer++;
+          break;
+        } else {
+          answer++;
+          priorities.shift();
+          important(priorities, locate);
+        }
+      }
+
+      // some 함수 이용해서 풀어보자
+
+      return answer;
+    }
+  </script>
+</html>
