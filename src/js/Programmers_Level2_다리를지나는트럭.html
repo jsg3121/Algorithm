@@ -19,23 +19,29 @@
       truck_weights = truck_weights.map((x) => {
         return {
           weight: x,
-          go: 0,
+          go: 1,
         };
       });
 
-      going.push(truck_weights.shift());
-      weight -= going[0].weight;
-
-      while (answer < 5) {
+      while (true) {
         going.map((x) => x.go++);
 
         going = going.filter((g) => {
-          return g.go < 3;
+          if (g.go > bridge_length) {
+            weight += g.weight;
+          }
+          return g.go <= bridge_length;
         });
-        console.log(going);
-        answer++;
-      }
 
+        if (truck_weights.length != 0) {
+          if (weight - truck_weights[0].weight >= 0) {
+            weight -= truck_weights[0].weight;
+            going.push(truck_weights.shift());
+          }
+        }
+        answer++;
+        if (going.length == 0 && truck_weights.length == 0) break;
+      }
       return answer;
     }
   </script>
