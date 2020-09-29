@@ -7,7 +7,7 @@
   </head>
   <body></body>
   <script>
-    let n = 3;
+    let n = 11;
     solution(n);
 
     function solution(n) {
@@ -17,15 +17,18 @@
         remain = n % 3;
 
         if (remain == 0) {
-          remain = 4;
+          remain = "4";
+          answer += remain;
+          n = Math.floor(n / 3) - 1;
+        } else {
+          answer += remain;
+          n = Math.floor(n / 3);
         }
 
-        answer += remain;
-        n = Math.floor(n / 3);
-        if (n == 0) break;
+        if (n / 3 == 0) break;
       }
+
       answer = answer.split("").reverse().join("");
-      console.log(answer);
       return answer;
     }
   </script>
