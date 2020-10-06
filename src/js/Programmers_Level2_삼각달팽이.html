@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let n = 5;
+    solution(n);
+    function solution(n) {
+      var answer = [];
+
+      let arr = new Array(n);
+      arr.fill("");
+      let cnt = 1;
+      // let right = n,
+      //   bottom = n - 1;
+      // left = 0;
+
+      // for (let i = 0; i < n; i++) {
+      //   arr[i] = new Array(i + 1);
+      // }
+
+      // for (let i = 1; i <= n; i++) {
+      //   if (i % 3 == 1) {
+      //     for (let j = 0; j < right; j++) {
+      //       arr[j][Math.floor(i / 3)] = cnt;
+      //       cnt++;
+      //     }
+
+      //     if (i == 4) break;
+      //   } else if (i % 3 == 2) {
+      //     for (let j = right - 1; j > 0; j--) {
+      //       arr[bottom][right - j] = cnt;
+      //       cnt++;
+      //     }
+      //   } else if (i % 3 == 0) {
+      //     for (let j = right - 2; j > 0; j--) {
+      //       left = arr[j].length - 1;
+      //       arr[j][left] = cnt;
+      //       cnt++;
+      //     }
+      //     right -= 3;
+      //     bottom--;
+      //   }
+      // }
+
+      return answer;
+    }
+  </script>
+</html>

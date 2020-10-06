@@ -7,13 +7,28 @@
   </head>
   <body></body>
   <script>
-    let w = 8,
-      h = 12;
+    let w = 7,
+      h = 9;
 
     solution(w, h);
 
+    // 직사각형의 대각선 길이를 지나는 사각형개수의 알고리즘
+    // ==> 너비 * 높이 - (너비 + 높이 - 너비와 높이의 최소공약수)
+
     function solution(w, h) {
       var answer = 1;
+
+      let min = Math.min(w, h),
+        gcd = 1;
+
+      for (let i = min; i > 0; i--) {
+        if (w % i === 0 && h % i === 0) {
+          gcd = i;
+          break;
+        }
+      }
+
+      answer = w * h - (w + h - gcd);
       return answer;
     }
   </script>
