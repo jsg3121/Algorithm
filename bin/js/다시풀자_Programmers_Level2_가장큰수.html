@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let numbers = [3, 30, 34, 5, 9, 10, 60];
+    solution(numbers);
+
+    function solution(numbers) {
+      var answer = "";
+
+      let ten = [];
+
+      // ten = numbers.filter((item) => {
+      //   return item % 10 === 0;
+      // });
+
+      // numbers = numbers.filter((item) => {
+      //   return item % 10 !== 0;
+      // });
+
+      // answer = numbers
+      //   .sort() // 숫자형식으로 정렬하지 않고
+      //   .reverse() // 10의 배수를 뺸 배열을 정렬 후 거꾸로
+      //   .concat(ten.sort().reverse()) //10의 배수만 가져온 배열도 정렬 후 거꾸로
+      //   .map((item) => {
+      //     return String(item);
+      //   }) //문자열로 변환
+      //   .join(""); //하나의 문자열로 합체
+
+      // console.log(answer);
+
+      console.log(numbers.sort().reverse());
+      return answer;
+    }
+  </script>
+</html>

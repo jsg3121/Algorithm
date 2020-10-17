@@ -58,23 +58,31 @@ public class Main {
         // if(!isNumber) System.out.println("문자열");
         // else System.out.println("숫자");
 
-        for (int i = 0; i <= 10; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        // for (int i = 0; i <= 10; i++) {
+        // for (int j = 0; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
 
-        int i = 0;
-        while (i <= 10) {
-            int j = 0;
-            while (j <= i) {
-                j++;
-                System.out.print("*");
-            }
-            i++;
-            System.out.println();
-        }
+        // int i = 0;
+        // while (i <= 10) {
+        // int j = 0;
+        // while (j <= i) {
+        // j++;
+        // System.out.print("*");
+        // }
+        // i++;
+        // System.out.println();
+        // }
+
+        // boolean a = true;
+        // Boolean b = true;
+
+        // System.out.println(a);
+        // System.out.println(b);
+
+        System.out.println("Asdf");
 
     }
 
