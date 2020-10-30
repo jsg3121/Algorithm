@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="./fonts/font.css" />
+
+    <style type="text/css"></style>
+  </head>
+
+  <body></body>
+  <script>
+    let n = 5,
+      arr1 = [9, 20, 28, 18, 11],
+      arr2 = [30, 1, 21, 17, 28];
+
+    solution(n, arr1, arr2);
+
+    function solution(n, arr1, arr2) {
+      var answer = [];
+
+      for (let i = 0; i < n; i++) {
+        arr1[i] = arr1[i].toString(2);
+        arr2[i] = arr2[i].toString(2);
+
+        arr1[i] = new Array(n - (arr1[i].length - 1)).join("0") + arr1[i];
+        arr2[i] = new Array(n - (arr2[i].length - 1)).join("0") + arr2[i];
+      }
+
+      for (let i = 0; i < n; i++) {
+        answer[i] = "";
+        for (let j = 0; j < n; j++) {
+          if (arr1[i].charAt(j) == "0" && arr2[i].charAt(j) == "0") {
+            answer[i] += " ";
+          } else {
+            answer[i] += "#";
+          }
+        }
+      }
+
+      console.log(answer);
+
+      return answer;
+    }
+  </script>
+</html>
