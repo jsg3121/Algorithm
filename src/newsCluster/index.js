@@ -20,24 +20,26 @@ const changeForm = (str) => {
   return arr;
 };
 
+const allZip = (arr1, arr2, same) => {
+  if (JSON.stringify(arr1) === JSON.stringify(same)) {
+    return arr2;
+  }
+  if (JSON.stringify(arr2) === JSON.stringify(same)) {
+    return arr1;
+  }
+  return [...arr1.filter((x) => !arr2.includes(x)).concat(arr2)];
+};
+
 function solution(str1, str2) {
   let arr1 = changeForm(str1);
   let arr2 = changeForm(str2);
-  let same = [];
-  let all = [...new Set(arr1.concat(arr2))];
+  let same = arr1.filter((x) => arr2.includes(x));
+  let all = allZip(arr1, arr2, same);
 
   if (arr1.length === 0 && arr2.length === 0) {
     return 65536;
   }
 
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-      if (arr1[i] === arr2[j]) {
-        same.push(arr1[i]);
-      }
-    }
-  }
-  same = [...new Set(same)];
   if (all.length === 1) {
     return parseInt(
       (Math.min(arr1.length, arr2.length) / Math.max(arr1.length, arr2.length)) * 65536,
@@ -52,6 +54,6 @@ function solution(str1, str2) {
   return parseInt((same.length / all.length) * 65536, 10);
 }
 
-const str1 = "aa1+aa2";
-const str2 = "AA12";
+const str1 = "as2dfy2";
+const str2 = "as3g cdfas";
 console.log(solution(str1, str2));
